@@ -56,7 +56,7 @@ set encoding=utf8
 set nobackup
 set noswapfile
 set hlsearch
-set textwidth=80
+" set textwidth=80
 set winwidth=100
 set winheight=5
 set winminheight=5
@@ -219,5 +219,3 @@ augroup END
   nnoremap tn  :tabnew<Space>
   nnoremap tm  :tabm<Space>
   nnoremap td  :tabclose<CR>
-
-  " test
