@@ -87,8 +87,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
+set iskeyword+=_,$,@,%,# " none of these should be word dividers, so make them not be"
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/.keep
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+nnoremap <leader>w :w!<cr>
 
 " Indentation
 " ------------------------
