@@ -30,7 +30,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
 Plugin 'othree/html5.vim'
 " Plugin 'craigemery/vim-autotag'
-" Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-dispatch'
 " Plugin 'tpope/vim-eunuch'
 
 call vundle#end()                       " required
