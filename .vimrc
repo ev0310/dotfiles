@@ -6,7 +6,6 @@ call vundle#rc()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'craigemery/vim-autotag'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/gist-vim'
@@ -14,12 +13,10 @@ Plugin 'mattn/webapi-vim'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-commentary'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'thoughtbot/vim-rspec'
@@ -32,13 +29,17 @@ Plugin 'christoomey/vim-tmux-runner'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
 Plugin 'othree/html5.vim'
+" Plugin 'craigemery/vim-autotag'
+" Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-eunuch'
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
 
 syntax on
 
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme afterglow
 set rtp+=/usr/local/opt/fzf
 set grepprg=ag
 set ttyfast
