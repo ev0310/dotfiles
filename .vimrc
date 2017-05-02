@@ -49,7 +49,7 @@ set autoindent
 let mapleader = "\<Space>"
 autocmd BufWritePre * StripWhitespace   " remove white spaces on save
 autocmd BufRead,BufNewFile *.erb set filetype=eruby.html
-hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+hi MatchParen ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 let g:airline_theme='molokai'
 set title
 set scrolloff=5
