@@ -28,7 +28,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'junegunn/fzf'
 Plugin 'christoomey/vim-tmux-runner'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
@@ -38,7 +37,7 @@ filetype plugin indent on               " required
 syntax on
 
 colorscheme Tomorrow-Night
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 set grepprg=ag
 set ttyfast
 set lazyredraw
@@ -171,6 +170,10 @@ augroup END
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
   set statusline+=%*
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
 " Delete current file
 " -------------------------
   map <Leader>df :call delete(expand('%')) \| bdelete!<CR>"
