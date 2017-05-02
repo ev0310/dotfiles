@@ -31,6 +31,8 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'christoomey/vim-tmux-runner'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mileszs/ack.vim'
+Plugin 'othree/html5.vim'
+
 call vundle#end()                       " required
 filetype plugin indent on               " required
 
@@ -45,8 +47,8 @@ set background=dark
 set regexpengine=1
 set autoindent
 let mapleader = "\<Space>"
-
 autocmd BufWritePre * StripWhitespace   " remove white spaces on save
+autocmd BufRead,BufNewFile *.erb set filetype=eruby.html
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 let g:airline_theme='molokai'
 set title
@@ -163,7 +165,7 @@ augroup END
 " -------------------------
   map <Leader>mm :vsplit $MYVIMRC<CR>
 
-" Fix Syntastic bootstrap-sprockets gem error
+" Syntastic Setup
 " -------------------------
   " let g:syntastic_scss_sass_args="--load-path ~/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets"
   " let g:syntastic_scss_sass_args="--load-path ~/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.6/assets"
@@ -174,6 +176,8 @@ augroup END
   let g:syntastic_auto_loc_list = 1
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
+  let g:syntastic_html_tidy_ignore_errors=["trimming empty <"]
+
 " Delete current file
 " -------------------------
   map <Leader>df :call delete(expand('%')) \| bdelete!<CR>"
@@ -222,3 +226,5 @@ augroup END
   nnoremap tn  :tabnew<Space>
   nnoremap tm  :tabm<Space>
   nnoremap td  :tabclose<CR>
+
+
