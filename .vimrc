@@ -31,7 +31,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'othree/html5.vim'
 " Plugin 'craigemery/vim-autotag'
 Plugin 'tpope/vim-dispatch'
-" Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-eunuch'
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
@@ -231,4 +231,6 @@ augroup END
   nnoremap tm  :tabm<Space>
   nnoremap td  :tabclose<CR>
 
-
+" Mina deploy
+" -----------------------
+  nnoremap <leader>md :!mina deploy<cr>
